@@ -51,5 +51,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "FPSTutorial.sln"
+    "dotnet.defaultSolution": "FPSTutorial.sln",
+    "git.ignoreLimitWarning": true
 }
