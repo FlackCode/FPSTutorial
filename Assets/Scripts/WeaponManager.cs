@@ -30,6 +30,12 @@ public class WeaponManager : MonoBehaviour
                 weaponSlot.SetActive(false);
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.Alpha1)) {
+            SwitchActiveSlot(0);
+        } else if (Input.GetKeyDown(KeyCode.Alpha2)) {
+            SwitchActiveSlot(1);
+        }
     }
 
     public void PickupWeapon(GameObject weapon) {
@@ -48,6 +54,7 @@ public class WeaponManager : MonoBehaviour
         pickedUpWeapon.transform.localRotation = Quaternion.Euler(weapon.spawnRotation.x, weapon.spawnRotation.y, weapon.spawnRotation.z);
 
         weapon.isActiveWeapon = true;
+        weapon.animator.enabled = true;
     }
 
     private void DropCurrentWeapon(GameObject pickedUpWeapon) {
@@ -55,10 +62,25 @@ public class WeaponManager : MonoBehaviour
             var weaponToDrop = activeWeaponSlot.transform.GetChild(0).gameObject;
 
             weaponToDrop.GetComponent<Weapon>().isActiveWeapon = false;
+            weaponToDrop.GetComponent<Weapon>().animator.enabled = false;
 
             weaponToDrop.transform.SetParent(pickedUpWeapon.transform.parent);
             weaponToDrop.transform.localPosition = pickedUpWeapon.transform.localPosition;
             weaponToDrop.transform.localRotation = pickedUpWeapon.transform.localRotation;
+        }
+    }
+
+    public void SwitchActiveSlot(int slotNumber) {
+        if (activeWeaponSlot.transform.childCount > 0) {
+            Weapon currentWeapon = activeWeaponSlot.transform.GetChild(0).GetComponent<Weapon>();
+            currentWeapon.isActiveWeapon = false;
+        }
+
+        activeWeaponSlot = weaponSlots[slotNumber];
+
+        if (activeWeaponSlot.transform.childCount > 0) {
+            Weapon newWeapon = activeWeaponSlot.transform.GetChild(0).GetComponent<Weapon>();
+            newWeapon.isActiveWeapon = true;
         }
     }
 }

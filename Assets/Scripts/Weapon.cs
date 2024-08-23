@@ -40,7 +40,8 @@ public class Weapon : MonoBehaviour
 
     public GameObject muzzleEffect;
 
-    private Animator animator;
+    //internal - can access from other scripts
+    internal Animator animator;
 
     public float reloadTime;
     public int magazineSize, bulletsLeft;
@@ -60,6 +61,9 @@ public class Weapon : MonoBehaviour
     void Update()
     {
         if (isActiveWeapon) {
+
+            GetComponent<Outline>().enabled = false;
+
             if (bulletsLeft == 0 && isShooting) {
                 SoundManager.Instance.emptyMagazineSound1911.Play();
             }
@@ -72,7 +76,7 @@ public class Weapon : MonoBehaviour
                 isShooting = Input.GetKeyDown(KeyCode.Mouse0);
             }
 
-            if (Input.GetKeyDown(KeyCode.R) && bulletsLeft < magazineSize && !isReloading) {
+            if (Input.GetKeyDown(KeyCode.R) && bulletsLeft < magazineSize && !isReloading && isActiveWeapon) {
                 Reload();
             }
 
