@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8837411233099518723}
   - component: {fileID: 8410501871394474273}
   - component: {fileID: 8580623609059574751}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: M1911
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 2391404169057897700}
   - component: {fileID: 3789082375681400222}
   - component: {fileID: 4401305678218616283}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 4604517203212585729}
   - component: {fileID: 4553240382302145010}
   - component: {fileID: 7473858789576332365}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: M1911
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -218,6 +218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a089abd7d90db24d83df0fd4a2a008e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isActiveWeapon: 0
   isShooting: 0
   readyToShoot: 0
   shootingDelay: 0.3
@@ -269,7 +270,7 @@ GameObject:
   - component: {fileID: 8440177514452731184}
   - component: {fileID: 5717726042586555294}
   - component: {fileID: 4774378685743121699}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MuzzleFlashEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5050,7 +5051,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5844009304336638893}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CINEMA_4D_Editor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5083,7 +5084,7 @@ GameObject:
   - component: {fileID: 449600298855132424}
   - component: {fileID: 6232506403146433266}
   - component: {fileID: 566793183107598779}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Slide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5164,7 +5165,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7955019015332208695}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BulletSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5198,7 +5199,7 @@ GameObject:
   - component: {fileID: 6674438120398156587}
   - component: {fileID: 3630486930557711671}
   - component: {fileID: 1088175219806495355}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hammer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5281,7 +5282,7 @@ GameObject:
   - component: {fileID: 6905277584531503579}
   - component: {fileID: 6013930199548617134}
   - component: {fileID: 4356546222587924609}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Magazin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
