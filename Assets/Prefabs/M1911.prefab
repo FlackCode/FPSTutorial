@@ -224,7 +224,9 @@ MonoBehaviour:
   shootingDelay: 0.3
   bulletsPerBurst: 1
   burstBulletsLeft: 0
-  spreadIntensity: 0.05
+  spreadIntensity: 0
+  hipSpreadIntensity: 0.4
+  adsSpreadIntensity: 0.04
   thisWeaponModel: 0
   currentShootingMode: 0
   bulletPrefab: {fileID: 7525655083486455237, guid: d691ac65e913f1242997fe08f45b14da, type: 3}
