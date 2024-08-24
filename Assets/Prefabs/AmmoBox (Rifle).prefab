@@ -88,7 +88,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ammoAmount: 150
-  ammoType: 1
+  ammoType: 0
 --- !u!114 &8424471001765019750
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -113,6 +113,7 @@ public class Weapon : MonoBehaviour
     }
 
     private void ExitADS() {
+        animator.ResetTrigger("RECOIL_ADS");
         animator.SetTrigger("exitADS");
         isADS = false;
         HUDManager.Instance.middleDot.SetActive(true);

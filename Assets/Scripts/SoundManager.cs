@@ -15,6 +15,9 @@ public class SoundManager : MonoBehaviour
     public AudioSource reloadingSoundM4;
     public AudioSource emptyMagazineSound1911;
 
+    public AudioSource throwablesChannel;
+    public AudioClip grenadeSound;
+
     private void Awake() {
         if (Instance != null && Instance != this) {
             Destroy(gameObject);

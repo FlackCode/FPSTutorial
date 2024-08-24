@@ -5243,6 +5243,8 @@ GameObject:
   - component: {fileID: 3996099046571165160}
   - component: {fileID: 4092033615121549068}
   - component: {fileID: 7373585129793760316}
+  - component: {fileID: 5301522089713072734}
+  - component: {fileID: 8469928076569420164}
   m_Layer: 6
   m_Name: M4_8
   m_TagString: Untagged
@@ -5339,7 +5341,6 @@ MonoBehaviour:
   shootingDelay: 0.15
   bulletsPerBurst: 1
   burstBulletsLeft: 0
-  spreadIntensity: 0
   hipSpreadIntensity: 0.5
   adsSpreadIntensity: 0.05
   thisWeaponModel: 1
@@ -5376,3 +5377,42 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5301522089713072734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8927677997370392461}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.38431373, g: 1, b: 0.53333336, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!65 &8469928076569420164
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8927677997370392461}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.05974221, y: 0.17664666, z: 0.72361183}
+  m_Center: {x: -0.0040133987, y: 0.008912887, z: 0.023460414}
