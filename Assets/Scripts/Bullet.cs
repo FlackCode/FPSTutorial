@@ -21,9 +21,9 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (collision.gameObject.CompareTag("Zombie")) {
+        if (collision.gameObject.CompareTag("Enemy")) {
             
-            collision.gameObject.GetComponent<Zombie>().TakeDamage(bulletDamage);
+            collision.gameObject.GetComponent<Enemy>().TakeDamage(bulletDamage);
 
             Destroy(gameObject);
 
