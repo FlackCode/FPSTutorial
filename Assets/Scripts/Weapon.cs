@@ -13,6 +13,7 @@ public class Weapon : MonoBehaviour
     //public Camera playerCamera;
 
     public bool isActiveWeapon;
+    public int weaponDamage;
 
     public bool isShooting, readyToShoot;
     bool allowReset = true;
@@ -68,6 +69,13 @@ public class Weapon : MonoBehaviour
     {
         if (isActiveWeapon) {
 
+            gameObject.layer = LayerMask.NameToLayer("WeaponRender");
+
+            foreach (Transform child in transform) {
+                child.gameObject.layer = LayerMask.NameToLayer("WeaponRender");
+                Debug.Log(child);
+            }
+
             if (Input.GetMouseButtonDown(1)) {
                 EnterADS();
             }
@@ -101,6 +109,12 @@ public class Weapon : MonoBehaviour
             if (readyToShoot && isShooting && bulletsLeft > 0) {
                 burstBulletsLeft = bulletsPerBurst;
                 FireWeapon();
+            }
+        } else {
+            gameObject.layer = LayerMask.NameToLayer("Default");
+
+            foreach (Transform child in transform) {
+                child.gameObject.layer = LayerMask.NameToLayer("Default");
             }
         }
     }
@@ -139,6 +153,9 @@ public class Weapon : MonoBehaviour
 
         //instantiate bullet
         GameObject bullet = Instantiate(bulletPrefab, bulletSpawn.position, Quaternion.identity);
+
+        Bullet bul = bullet.GetComponent<Bullet>();
+        bul.bulletDamage = weaponDamage;
 
         bullet.transform.forward = shootingDirection;
 
@@ -214,6 +231,4 @@ public class Weapon : MonoBehaviour
         yield return new WaitForSeconds(delay);
         Destroy(bullet);
     }
-
-    
 }
