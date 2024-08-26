@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Microsoft.Unity.VisualStudio.Editor;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour
@@ -41,6 +43,17 @@ public class Player : MonoBehaviour
     private IEnumerator ShowGameOverUI() {
         yield return new WaitForSeconds(1f);
         gameOverUI.gameObject.SetActive(true);
+
+        int waveSurvived = GlobalReferences.Instance.waveNumber;
+        SaveLoadManager.Instance.SaveHighScore(waveSurvived);
+
+        StartCoroutine(ReturnToMainMenu());
+    }
+
+    private IEnumerator ReturnToMainMenu()
+    {
+        yield return new WaitForSeconds(4f);
+        SceneManager.LoadScene("MainMenu");
     }
 
     private IEnumerator BloodyScreenEffect() {
